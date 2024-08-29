@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={% static 'css/style.css' %}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link href="//fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <script defer src="{% static 'js/main.js' %}"></script>
     <title>
-        {% block title %}
-        {% endblock title %}
+      {% block title %}
+
+      {% endblock %}
     </title>
-</head>
-<body>
-    <nav>
-        <a href="/" title="home">Home</a>
-        <a href="{% url 'services:service_page' %}" title="Services">Services</a>
-        <a href="{% url 'contact:contact_page' %}" title="contact">Contact</a>
-    </nav>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header">
+      <div id="logo">
+        <h1><a href="/">ALORK</a></h1>
+      </div>
+      <div id="menu-toggle">&#9776;</div>
+      <nav id="menu">
+        <ul>
+          <li>
+            <a href="/" title="home" class="active">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'services:service_page' %}" title="Services">Services</a>
+          </li>
+          <li>
+            <a href="{% url 'contact:contact_page' %}" title="Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     {% block content %}
-    {% endblock content %}
-</body>
+
+    {% endblock %}
+  </body>
 </html>
