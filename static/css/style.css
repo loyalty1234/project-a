@@ -40,7 +40,9 @@ p {
     text-decoration: none;
     color: whitesmoke;
 }
-
+#header{
+    height: 80px;
+}
 .container {
     overflow: hidden;
     margin: 0 auto;
@@ -48,6 +50,7 @@ p {
     max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
+
 }
 
 /* Image Style */
